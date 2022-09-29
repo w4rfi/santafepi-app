@@ -1,7 +1,7 @@
 import { Card, CardMedia, CardContent, Typography } from '@mui/material'
 
 
-const Item = (zona, precio, img) => {
+const Item = ({zona, precio, img}) => {
     return (
     <Card sx={{ maxWidth: 345 }}>
         <CardMedia

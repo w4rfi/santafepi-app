@@ -1,21 +1,15 @@
 import { Box } from "@mui/material";
-import Item from './Item'
+import Grid from "@mui/material/Unstable_Grid2";
+import Item from "./Item";
 
-
-
-const ItemList = (items) => {
-    return(
-
-        <Box>
-            {items.map(({zona, id, precio, img}) => { 
-                return (
-                    <Item key={id} zona={zona} precio={precio} img={img} />
-                );
-            })}
-        </Box>
-
+const ItemList = ({ items }) => {
+    return (
+        <>
+        {items.map((zones) => (
+            <Item key={zones.id} {...zones} />
+            ))}
+        </>
     );
-}
+};
 
 export default ItemList;
-
