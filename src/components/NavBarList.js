@@ -1,6 +1,6 @@
 import { Box, Button } from '@mui/material';
 
-export default function NavBarList() {
+const NavBarList = () => {
 
     const navItems = ['Productos', 'Quienes somos', 'Contacto'];
 
@@ -16,6 +16,8 @@ export default function NavBarList() {
 
     );
 }
+
+export default NavBarList; 
 
 
 

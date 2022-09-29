@@ -2,10 +2,12 @@ import { AppBar, Toolbar, Typography, Box } from "@mui/material";
 import CartWidget from "./CartWidget";
 import NavBarList from "./NavBarList";
 
-export default function NavBar() {
+
+
+const NavBar = () => {
     return (
     <Box>
-    <AppBar position="static">
+    <AppBar position="fixed" sx={{ width:'100%' }}>
         <Toolbar
             sx={{
                 display: "flex",
@@ -33,3 +35,7 @@ export default function NavBar() {
     </Box>
     );
 }
+
+
+export default NavBar;
+
