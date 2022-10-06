@@ -7,16 +7,8 @@ import RemoveIcon from '@mui/icons-material/Remove';
 
 
 
-const CountCart = ({ stockAvailable }) => {
+const CountCart = ({ stockAvailable, onAdd }) => {
 
-    const ColorAlerts = (countAdd) => {
-        return (
-            swal("Listo!", `Usted agrego ${countAdd} productos al carrito.`, "success")
-        );
-    }
-
-
-    const cart = [];
     const [count, setCount] = useState(0)
 
     const upCount = () => {
@@ -25,12 +17,6 @@ const CountCart = ({ stockAvailable }) => {
 
     const restCount = () => {
         count > 0 ? setCount(count - 1) : console.log('error');
-    }
-
-    const onAdd = () => {
-        ColorAlerts(count)
-        cart.push(count)
-        console.log(cart)
     }
 
     return(

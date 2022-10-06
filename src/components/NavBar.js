@@ -1,6 +1,8 @@
-import { AppBar, Toolbar, Typography, Box } from "@mui/material";
+import { AppBar, Toolbar, Box } from "@mui/material";
+import { NavLink } from "react-router-dom";
 import CartWidget from "./CartWidget";
 import NavBarList from "./NavBarList";
+import LogoSantaDepi from "../assets/logosantadepi.png"
 
 
 
@@ -17,17 +19,9 @@ const NavBar = () => {
                 color: "#ffffff",
             }}
         >
-        <Typography
-            variant="h5"
-            sx={{
-                fontFamily: "Monospace",
-                fontWeight: 500,
-                fontStyle: "italic",
-                fontSize: 35,    
-            }}
-        >
-            SantaDepi App
-        </Typography>
+        <NavLink to={'/'} >
+            <img src={LogoSantaDepi} alt="logo empresa" style={{height: 80, }}/>
+        </NavLink>
         <NavBarList />
         <CartWidget />
         </Toolbar>

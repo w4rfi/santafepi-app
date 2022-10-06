@@ -1,40 +1,38 @@
 import {useState, useEffect} from "react";
-import {Box, Typography, Grid } from "@mui/material";
-import CountCart from "./ItemCount";
+import {Box, Grid } from "@mui/material";
 import ItemList from "./ItemList";
+import ItemDetailContainer from "./ItemDetailContainer";
+import { useParams } from "react-router-dom";
 
 
 
-const ItemListContainer = ({ greeting }) => {
+const ItemListContainer = () => {
 
-    
+    const {sexo} = useParams()
+
     const [infoItem, setInfoItem] = useState([]);
 
     const getZonas = async () => {
         const response = await fetch('/Zones.json');
         const data = await response.json();
-        setInfoItem(data);
+        const dataSex = data.filter(value => value.sexo == sexo);
+        setInfoItem(dataSex)
     }
 
     useEffect(() => {
         setTimeout(() => {
             getZonas()
         }, 2000);
-    },[])
+    },[infoItem])
 
 
     return(
             <Box maxWidth={'100%'} sx={{ height: 300, display:'flex', flexDirection:'column', alignItems:'center', mt: 10, color: '#f06292', textAlign:'center', fontFamily: 'monospace', fontStyle:'italic' }} >
-                {/* <Typography variant='h1'>
-                Bienvenidos a {greeting}! 
-                </Typography> */}
             <Box >
-                <Grid container rowSpacing={1} columnSpacing={{ md: 5 }} >
+                <Grid container gap={4}>
                 <ItemList items={infoItem} />
                 </Grid>
             </Box>
-
-                <CountCart stockAvailable='5' />
             </Box>
             
     );

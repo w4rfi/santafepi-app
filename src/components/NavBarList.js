@@ -1,17 +1,20 @@
 import { Box, Button } from '@mui/material';
+import { NavLink } from 'react-router-dom';
 
 const NavBarList = () => {
 
-    const navItems = ['Productos', 'Quienes somos', 'Contacto'];
-
-
     return(
-        <Box sx={{ mr: 9, display: { xs: 'none', sm: 'block'} }}>
-            {navItems.map((item) => (
-        <Button key={item} sx={{ color: '#ffffff', fontSize: 15 }}>
-        {item}
+        <Box sx={{ mr: 25, display:'flex', flexDirection:'row' }}>
+        <NavLink to={`/category/femenino`} >
+        <Button sx={{ color: '#ffffff', fontSize: 15 }}>
+            Mujer
         </Button>
-))}
+        </NavLink>
+        <NavLink to={`/category/masculino`} >
+        <Button sx={{ color: '#ffffff', fontSize: 15 }}>
+            Hombre
+        </Button>
+        </NavLink>
         </Box>
 
     );
