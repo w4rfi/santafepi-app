@@ -1,5 +1,5 @@
-import {  useState } from 'react';
-import swal from 'sweetalert';
+
+import { useState } from "react";
 import { Button, ButtonGroup, Box, Badge } from '@mui/material';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import AddIcon from '@mui/icons-material/Add';
@@ -7,12 +7,12 @@ import RemoveIcon from '@mui/icons-material/Remove';
 
 
 
-const CountCart = ({ stockAvailable, onAdd }) => {
+const CountCart = ({ onClick, stock }) => {
 
     const [count, setCount] = useState(0)
 
     const upCount = () => {
-        count < stockAvailable ? setCount(count + 1) : console.log('No hay mas stock');
+        count < stock ? setCount(count + 1) : console.log('No hay mas stock');
     }
 
     const restCount = () => {
@@ -34,7 +34,7 @@ const CountCart = ({ stockAvailable, onAdd }) => {
                 </Button>
             </ButtonGroup>
             </Box>
-            <Button onClick={onAdd} sx={{ height:'35px', width:'200px', color:'#f06292', border:'solid 0.5px #f06292' }}>
+            <Button onClick={() => { onClick(count)}} sx={{ height:'35px', width:'200px', color:'#f06292', border:'solid 0.5px #f06292' }}>
                 Agregar al carrito
             </Button>
         </Box>
@@ -42,3 +42,4 @@ const CountCart = ({ stockAvailable, onAdd }) => {
 }
 
 export default CountCart;
+

@@ -4,7 +4,13 @@ import { NavLink } from 'react-router-dom';
 
 const Item = ({zona, precio, img, id}) => {
     return (
-    <Card sx={{ maxWidth: 240, maxHeight: 240, minHeight: 240, mt: 10, color:'#f06292', borderColor:'#f06292' }}>
+    <Card sx={{ maxWidth: 240, 
+                maxHeight: 240, 
+                minHeight: 240, 
+                mt: 10, 
+                color:'#f06292', 
+                borderColor:'#f06292' 
+                }}>
         <CardMedia
         component="img"
         alt={zona}
@@ -16,7 +22,9 @@ const Item = ({zona, precio, img, id}) => {
             {zona}
         </Typography>
         <NavLink to={`/item/${id}`}>
-        <Button variant="outlined" sx={{color:'#f06292', borderColor:'#f06292'}}>Más info</Button>
+        <Button variant="outlined" sx={{color:'#f06292', borderColor:'#f06292'}}>
+            Más info
+        </Button>
         </NavLink>
         </CardContent>
     </Card>

@@ -4,7 +4,8 @@
         "precio": 500,
         "id": 1,
         "sexo": "femenino",
-        "img": "https://cdnx.jumpseller.com/clinica-cela/image/15558102/bozo-mujer-blog-cela.jpg.jpg.jpg?1616599475"
+        "img": "https://cdnx.jumpseller.com/clinica-cela/image/15558102/bozo-mujer-blog-cela.jpg.jpg.jpg?1616599475",
+        "stock": 2
     },
 
     {
@@ -12,7 +13,8 @@
         "precio": 900,
         "id": 2,
         "sexo": "femenino",
-        "img": "https://www.monteprincipelaser.com/media/k2/items/cache/3899dfe821816fbcb3db3e3b23f81585_XL.jpg"
+        "img": "https://www.monteprincipelaser.com/media/k2/items/cache/3899dfe821816fbcb3db3e3b23f81585_XL.jpg",
+        "stock": 2
     },
 
     {
@@ -20,7 +22,8 @@
         "precio": 900,
         "id": 3,
         "sexo": "femenino",
-        "img": "https://www.iml.es/wp-content/uploads/2021/05/depilacion-laser-zona-peque%C3%B1a-700x526.jpg"
+        "img": "https://www.iml.es/wp-content/uploads/2021/05/depilacion-laser-zona-peque%C3%B1a-700x526.jpg",
+        "stock": 2
     },
 
     {
@@ -28,7 +31,8 @@
         "precio": 1200,
         "id": 4,
         "sexo": "femenino",
-        "img": "https://skinclub.com.ar/wp-content/uploads/2016/05/DEPILACION-300x225.jpg"
+        "img": "https://skinclub.com.ar/wp-content/uploads/2016/05/DEPILACION-300x225.jpg",
+        "stock": 2
     },
 
     {
@@ -36,7 +40,8 @@
         "precio": 500,
         "id": 5,
         "sexo": "masculino",
-        "img": "https://dermativa.es/wp-content/uploads/2021/03/Depilacion_de_pecho_en_hombres.jpg"
+        "img": "https://dermativa.es/wp-content/uploads/2021/03/Depilacion_de_pecho_en_hombres.jpg",
+        "stock": 2
     },
 
     {
@@ -44,7 +49,8 @@
         "precio": 500,
         "id": 6,
         "sexo": "masculino",
-        "img": "https://static3.abc.es/media/summum/2019/10/04/depilacion-laser-hombre-IML-4-kbuG--660x372@abc.jpg"
+        "img": "https://static3.abc.es/media/summum/2019/10/04/depilacion-laser-hombre-IML-4-kbuG--660x372@abc.jpg",
+        "stock": 2
     },
 
     {
@@ -52,7 +58,8 @@
         "precio": 500,
         "id": 7,
         "sexo": "masculino",
-        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmIGPWC1Ir2JZsu58GFdTkuY24xBX91EuQexQBqL8gIH9-qKeWpvT2EFZBNgboRb1drOc&usqp=CAU"
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmIGPWC1Ir2JZsu58GFdTkuY24xBX91EuQexQBqL8gIH9-qKeWpvT2EFZBNgboRb1drOc&usqp=CAU",
+        "stock": 2
     },
 
     {
@@ -60,6 +67,7 @@
         "precio": 1200,
         "id": 8,
         "sexo": "masculino",
-        "img": "https://cdn.shopify.com/s/files/1/0251/2214/4336/articles/5971b7af11c4b4419403020d57154274.jpg?v=1653985592"
+        "img": "https://cdn.shopify.com/s/files/1/0251/2214/4336/articles/5971b7af11c4b4419403020d57154274.jpg?v=1653985592",
+        "stock": 2
     }
 ]

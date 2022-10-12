@@ -1,18 +1,42 @@
+
+import { useState } from "react";
 import { Card, CardMedia, CardContent, Typography, CardActions } from "@mui/material";
+// import { useNavigate } from "react-router-dom";
 import CountCart from "./ItemCount";
 
 
 
-const ItemDetail = ({zona, precio, img, sexo}) => {
+const ItemDetail = ({zona, precio, img, sexo, stock}) => {
+
+    const [quantity, setQuantity] = useState()
+
+    // let navigate = useNavigate()
+
+    const onAdd = (push) => {
+        setQuantity(push)
+        console.log(quantity)
+        // navigate(`/cart`)
+    }
+
+
+
     return(
-        <Card sx={{ width: 675, height: 445, display: 'flex', flexDirection:'column', justifyContent:'space-between', alignItems:'center', m:'auto', mt: 20, textAlign:'center' }}>
+        <Card sx={{ width: 675, 
+                    height: 445, 
+                    display: 'flex', 
+                    flexDirection:'column', 
+                    justifyContent:'space-between', 
+                    alignItems:'center', 
+                    m:'auto', 
+                    mt: 20, 
+                    textAlign:'center' }}>
         <CardMedia
             component="img"
             height="140"
             image={img}
             alt={zona}
         />
-        <CardContent sx={{}}>
+        <CardContent>
             <Typography gutterBottom variant="h3" component="div">
             {zona}
             </Typography>
@@ -24,7 +48,7 @@ const ItemDetail = ({zona, precio, img, sexo}) => {
             </Typography>
         </CardContent>
         <CardActions>
-        <CountCart stockAvailable='5' />
+        <CountCart onClick={onAdd} stock={stock} />
         </CardActions>
         </Card>
     );
