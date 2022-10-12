@@ -1,5 +1,34 @@
+/* HOMEPAGE STYLES */
+
+
+.containerHome{
+  display: flex;
+  flex-direction: column;
+}
 .imgHome {
   width: 700px;
   height: 300px;
   margin: auto;
 }
+.titleHome {
+  color: #f06292;
+  text-align: center;
+}
+
+/* NAVBAR STYLES */
+
+.appBar{
+  position: fixed;
+  width: 100%;
+}
+.toolBar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #f06292;
+  color: #ffffff;
+}
+.logoAppBar{
+  height: 80px;
+}
+

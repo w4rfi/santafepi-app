@@ -3,21 +3,20 @@ import { useState } from "react";
 import { Card, CardMedia, CardContent, Typography, CardActions } from "@mui/material";
 // import { useNavigate } from "react-router-dom";
 import CountCart from "./ItemCount";
+import EndCountCart from "./EndCountCart";
 
 
 
 const ItemDetail = ({zona, precio, img, sexo, stock}) => {
 
-    const [quantity, setQuantity] = useState()
+    const [quantity, setQuantity] = useState(0)
 
     // let navigate = useNavigate()
 
     const onAdd = (push) => {
         setQuantity(push)
-        console.log(quantity)
         // navigate(`/cart`)
     }
-
 
 
     return(
@@ -48,7 +47,7 @@ const ItemDetail = ({zona, precio, img, sexo, stock}) => {
             </Typography>
         </CardContent>
         <CardActions>
-        <CountCart onClick={onAdd} stock={stock} />
+        {quantity > 1 ? <EndCountCart></EndCountCart> : <CountCart onAdd={onAdd} stock={stock} />}
         </CardActions>
         </Card>
     );

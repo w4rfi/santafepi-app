@@ -4,14 +4,14 @@ import { NavLink } from 'react-router-dom';
 const NavBarList = () => {
 
     return(
-        <Box sx={{ mr: 25, display:'flex', flexDirection:'row' }}>
+        <Box sx={{mr: 25}}>
         <NavLink to={`/category/femenino`} >
-        <Button sx={{ color: '#ffffff', fontSize: 15 }}>
+        <Button sx={{color:'#ffffff', fontSize: 15}}>
             Mujer
         </Button>
         </NavLink>
         <NavLink to={`/category/masculino`} >
-        <Button sx={{ color: '#ffffff', fontSize: 15 }}>
+        <Button sx={{color:'#ffffff', fontSize: 15}}>
             Hombre
         </Button>
         </NavLink>
