@@ -1,21 +1,24 @@
-
 import { useState } from "react";
+import { useCartContext } from "./context/CartContext";
 import { Card, CardMedia, CardContent, Typography, CardActions } from "@mui/material";
-// import { useNavigate } from "react-router-dom";
 import CountCart from "./ItemCount";
 import EndCountCart from "./EndCountCart";
 
 
 
-const ItemDetail = ({zona, precio, img, sexo, stock}) => {
+const ItemDetail = ({...item}) => {
 
     const [quantity, setQuantity] = useState(0)
 
-    // let navigate = useNavigate()
+    const { addItem } = useCartContext();
 
     const onAdd = (push) => {
-        setQuantity(push)
-        // navigate(`/cart`)
+        setQuantity(parseInt(push))
+        console.log(quantity)
+    }
+
+    const addToCart = () => {
+        addItem(quantity, item)
     }
 
 
@@ -32,22 +35,22 @@ const ItemDetail = ({zona, precio, img, sexo, stock}) => {
         <CardMedia
             component="img"
             height="140"
-            image={img}
-            alt={zona}
+            image={item.img}
+            alt={item.zona}
         />
         <CardContent>
             <Typography gutterBottom variant="h3" component="div">
-            {zona}
+            {item.zona}
             </Typography>
             <Typography variant="h6" color="text.secondary">
-            {sexo}
+            {item.sexo}
             </Typography>
             <Typography variant="h6" color="text.secondary">
-            ${precio}
+            ${item.precio}
             </Typography>
         </CardContent>
         <CardActions>
-        {quantity > 1 ? <EndCountCart></EndCountCart> : <CountCart onAdd={onAdd} stock={stock} />}
+        {quantity > 0 ? <EndCountCart></EndCountCart> : <CountCart addToCart={addToCart} onAdd={onAdd} stock={item.stock} />}
         </CardActions>
         </Card>
     );
