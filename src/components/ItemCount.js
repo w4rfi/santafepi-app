@@ -7,7 +7,7 @@ import RemoveIcon from '@mui/icons-material/Remove';
 
 
 
-const CountCart = ({ onAdd, addToCart, stock }) => {
+const CountCart = ({ onAdd, stock }) => {
 
     const [count, setCount] = useState(0)
 
@@ -34,7 +34,7 @@ const CountCart = ({ onAdd, addToCart, stock }) => {
                 </Button>
             </ButtonGroup>
             </Box>
-            <Button onClick={() => { onAdd(count); addToCart()}} sx={{ height:'35px', width:'200px', color:'#f06292', border:'solid 0.5px #f06292' }}>
+            <Button onClick={() => { onAdd(count)}} sx={{ height:'35px', width:'200px', color:'#f06292', border:'solid 0.5px #f06292' }}>
                 Agregar al carrito
             </Button>
         </Box>

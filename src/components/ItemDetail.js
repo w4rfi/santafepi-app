@@ -11,16 +11,13 @@ const ItemDetail = ({...item}) => {
     const [quantity, setQuantity] = useState(0)
 
     const { addItem } = useCartContext();
-
-    const onAdd = (push) => {
-        setQuantity(parseInt(push))
-        console.log(quantity)
+    
+    const onAdd = (amount) => {
+        setQuantity(amount)
+        addItem(amount, item)
     }
 
-    const addToCart = () => {
-        addItem(quantity, item)
-    }
-
+    console.log(quantity)
 
     return(
         <Card sx={{ width: 675, 
@@ -50,7 +47,7 @@ const ItemDetail = ({...item}) => {
             </Typography>
         </CardContent>
         <CardActions>
-        {quantity > 0 ? <EndCountCart></EndCountCart> : <CountCart addToCart={addToCart} onAdd={onAdd} stock={item.stock} />}
+        {quantity > 0 ? <EndCountCart /> : <CountCart onAdd={onAdd} stock={item.stock} />}
         </CardActions>
         </Card>
     );
