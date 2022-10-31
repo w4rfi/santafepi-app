@@ -1,35 +1,30 @@
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Tooltip, IconButton, Box} from '@mui/material';
+import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Box, Tooltip, IconButton} from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
-import { useCartContext } from './context/CartContext';
+import { useCartContext } from '../context/CartContext';
+import Form from '../Form';
 
 
 
 
-const Cart = () => {
-
-    const { cart, clear, removeItem } = useCartContext();
-
+const CartTable = () => {
+    
+    const { cart, removeItem} = useCartContext();
+    
     const amount = cart.reduce((acc, zonas) => acc + zonas.precio,0);
     
     const iva = 0.21;
-
-    const addIva = amount * iva;
-
-    const totalAmount = amount + addIva;
     
-    console.log(cart)
+    const addIva = amount * iva;
+    
+    const totalAmount = amount + addIva;
 
 
+    
     return (
         <Box sx={{color:'#f06292'}}>
-        <TableContainer  sx={{mt: 20}} >
+        <TableContainer >
             <Table sx={{ minWidth: 500 }} aria-label="spanning table">
-                <TableHead >
-                    <TableRow >
-                        <TableCell align="center" sx={{textAlign:'center', color:'#f06292'}}>
-                            Detalles
-                        </TableCell>
-                    </TableRow>
+                <TableHead>
                     <TableRow>
                         <TableCell >Nombre</TableCell>
                         <TableCell align="right" >Sexo</TableCell>
@@ -42,15 +37,15 @@ const Cart = () => {
                     {cart.map((zonas) => (
                         <TableRow key={zonas.id} >
                             <TableCell >{zonas.zona}</TableCell>
-                            <TableCell align="right" >{zonas.sexo}</TableCell>
+                            <TableCell align="right" >{zonas.categoryId}</TableCell>
                             <TableCell align="right" >{zonas.quantity}</TableCell>
                             <TableCell align="right" >{zonas.precio}</TableCell>
                             <TableCell align='right' >
-                            <Tooltip title="Delete">
-                            <IconButton>
-                                <DeleteIcon />
-                            </IconButton>
-                            </Tooltip>
+                                <Tooltip title="Delete">
+                                <IconButton>
+                                <DeleteIcon onClick={() => removeItem(zonas.id)} />
+                                </IconButton>
+                                </Tooltip>
                             </TableCell>
                         </TableRow>
                     ))}
@@ -74,8 +69,10 @@ const Cart = () => {
                 </TableBody>
             </Table>
         </TableContainer>
+        <Form iva={addIva} total={totalAmount} />
         </Box>
+
     );
 }
 
-export default Cart;
+export default CartTable;

@@ -1,9 +1,10 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import {useState, useEffect} from "react";
 import {Box, Grid } from "@mui/material";
-import ItemList from "./ItemList";
+import ItemList from "../presentation/ItemList";
 // import ItemDetailContainer from "./ItemDetailContainer";
 import { useParams } from "react-router-dom";
+import { collection, getDocs, getFirestore, query, where } from "firebase/firestore"
 
 
 
@@ -13,19 +14,17 @@ const ItemListContainer = () => {
 
     const [infoItem, setInfoItem] = useState([]);
 
-    const getZonas = async () => {
-        const response = await fetch('/Zones.json');
-        const data = await response.json();
-        const dataSex = data.filter(value => value.sexo === sexo);
-        setInfoItem(dataSex)
-    }
-
     useEffect(() => {
-        setTimeout(() => {
-            getZonas()
-        }, 2000);
-    },[infoItem])
+        const db = getFirestore();
 
+        const q = query(collection(db, "zonas"), where("categoryId", "==", sexo));
+        getDocs(q).then((snapshot) => {
+            if (snapshot.size === 0) {
+                console.log("No hay resultados");
+            }
+            setInfoItem(snapshot.docs.map((zonas) => ({id: zonas.id, ...zonas.data()})));
+        })
+    },[infoItem]);
 
     return(
             <Box sx={{ height: 300, 

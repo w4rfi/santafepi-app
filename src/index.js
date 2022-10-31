@@ -2,7 +2,20 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import { initializeApp } from "firebase/app";
 
+
+
+const firebaseConfig = {
+  apiKey: "AIzaSyA7cxeukEhgpwgXkR4EzqIhk85gmHVmhNc",
+  authDomain: "santadepi-app-4ba58.firebaseapp.com",
+  projectId: "santadepi-app-4ba58",
+  storageBucket: "santadepi-app-4ba58.appspot.com",
+  messagingSenderId: "529696242491",
+  appId: "1:529696242491:web:cc82b2ed4aaf9e261a151e"
+};
+
+initializeApp(firebaseConfig);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

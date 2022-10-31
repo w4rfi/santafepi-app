@@ -13,6 +13,7 @@
 .titleHome {
   color: #f06292;
   text-align: center;
+  margin-top: 30px;
 }
 
 /* NAVBAR STYLES */
@@ -31,4 +32,6 @@
 .logoAppBar{
   height: 80px;
 }
-
+.cartWidget{
+  color: #ffffff;
+}

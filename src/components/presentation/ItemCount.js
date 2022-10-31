@@ -35,7 +35,7 @@ const CountCart = ({ onAdd, stock }) => {
             </ButtonGroup>
             </Box>
             <Button onClick={() => { onAdd(count)}} sx={{ height:'35px', width:'200px', color:'#f06292', border:'solid 0.5px #f06292' }}>
-                Agregar al carrito
+                Agregar a tu combo
             </Button>
         </Box>
     );

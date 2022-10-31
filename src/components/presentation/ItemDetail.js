@@ -1,12 +1,12 @@
 import { useState } from "react";
-import { useCartContext } from "./context/CartContext";
+import { useCartContext } from "../context/CartContext";
 import { Card, CardMedia, CardContent, Typography, CardActions } from "@mui/material";
 import CountCart from "./ItemCount";
 import EndCountCart from "./EndCountCart";
 
 
 
-const ItemDetail = ({...item}) => {
+const ItemDetail = ({item}) => {
 
     const [quantity, setQuantity] = useState(0)
 
@@ -16,8 +16,6 @@ const ItemDetail = ({...item}) => {
         setQuantity(amount)
         addItem(amount, item)
     }
-
-    console.log(quantity)
 
     return(
         <Card sx={{ width: 675, 

@@ -1,7 +1,7 @@
 import IconButton from '@mui/material/IconButton';
 import { Badge } from '@mui/material';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import { useCartContext } from './context/CartContext';
+import { useCartContext } from '../context/CartContext';
 
 
 const CartWidget = () => {

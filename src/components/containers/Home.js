@@ -1,5 +1,5 @@
 import { Typography, Box } from "@mui/material";
-import "../index.css";
+
 
 
 const Home = ({greeting}) => {
