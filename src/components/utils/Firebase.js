@@ -1,5 +1,8 @@
 import { getFirestore, collection, addDoc, getDocs, doc, getDoc, query, where } from "firebase/firestore";
 
+
+
+
 const db = () => getFirestore();
 
     export const FilterId = (id) =>{
@@ -13,8 +16,8 @@ const db = () => getFirestore();
     }
 
     export const AddOrder = (order) => {
-
+        
         const ordersCollections = collection(db(), "orders");
         addDoc(ordersCollections, order);
-
+        
     }

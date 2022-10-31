@@ -18,7 +18,7 @@ function App() {
       <Routes>
         <Route exact path='/' element={<Home greeting='SantaDepi' />} />
         <Route exact path='/category/:sexo' element={<ItemListContainer />} />
-        <Route exact path='/item/:id' element={<ItemDetailContainer />} />
+        <Route exact path='/item/:id' element={<ItemDetailContainer /> } />
         <Route exact path='/cart' element={ <Cart /> } />
       </Routes>
       </CartContextProvider>

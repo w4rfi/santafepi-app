@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { Box, FormControl, FormHelperText, Input, InputLabel, Button } from '@mui/material';
-import { useCartContext } from '../components/context/CartContext';
-import { AddOrder } from './utils/Firebase';
+import { useCartContext } from '../context/CartContext';
+import { AddOrder } from '../utils/Firebase';
+
 
 const Form = ({iva, total}) => {
 
-    const {cart} = useCartContext();
+    const {cart, clear } = useCartContext();
+
 
     const [datos, setDatos] = useState({
         name: '',
@@ -21,8 +23,12 @@ const Form = ({iva, total}) => {
         })
     }
 
+    const today = new Date();
+    const date = today.toLocaleDateString()
+
     const hanldeClick = () => {
-        AddOrder([{Buyer:{...datos}},{Zonas: [...cart]}, {Iva: iva}, {Total: total}])
+        AddOrder({Buyer:{...datos}, Sleccionado:{...cart}, Iva: iva, Total: total, date})
+        clear()
     }
 
     

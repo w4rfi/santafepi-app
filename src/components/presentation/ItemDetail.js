@@ -38,7 +38,7 @@ const ItemDetail = ({item}) => {
             {item.zona}
             </Typography>
             <Typography variant="h6" color="text.secondary">
-            {item.sexo}
+            {item.categoryId}
             </Typography>
             <Typography variant="h6" color="text.secondary">
             ${item.precio}
