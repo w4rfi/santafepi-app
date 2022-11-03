@@ -6,6 +6,7 @@ import ItemListContainer from './components/containers/ItemListContainer'
 import ItemDetailContainer from './components/containers/ItemDetailContainer';
 import { CartContextProvider } from "./components/context/CartContext";
 import Cart from "./components/containers/Cart";
+import Footer from "./components/presentation/Footer";
 
 
 
@@ -22,6 +23,7 @@ function App() {
         <Route exact path='/cart' element={ <Cart /> } />
       </Routes>
       </CartContextProvider>
+      <Footer />
     </Router>
 
   );

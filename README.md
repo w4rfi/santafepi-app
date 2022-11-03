@@ -34,6 +34,13 @@ Si se esta de acuerdo con lo visualizado en el carrito se puede finalizar compra
 En ese instante se genera una orden, la cual se aloja en FireBase con una fecha, los datos ingresados y los servicios seleccionados. 
 
 
+# Observaciones:
+
+* Aún no se refleja el número de orden al finalizar la compra
+* Falta optimizar código
+* El código aún se encuentra con styles in line y se está trabajando para mejorar eso, ya que Material UI tiene muchas prioridades en los styles como para usar directamente css.
+
+
 # **TECNOLOGÍAS**
 
 * Material UI
