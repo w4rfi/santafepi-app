@@ -9,7 +9,7 @@ const Footer = () => {
         py={{ xs: 5, sm: 10 }}
         bgcolor="#f06292"
         color="white"
-        sx={{ height: 230, mt: 29 }}
+        sx={{ width:'100%' ,height: 230, position: 'absolute', bottom: 0}}
         >
         <Container maxWidth="lg">
             <Grid container spacing={5}>
