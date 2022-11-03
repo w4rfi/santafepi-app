@@ -72,3 +72,5 @@ const Footer = () => {
 }
 
 export default Footer;
+
+// COMENTARIO DE PRUEBA
