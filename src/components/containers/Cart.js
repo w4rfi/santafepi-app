@@ -14,7 +14,7 @@ const Cart = () => {
         <Typography variant='h1' className="titleHome" sx={{mt: 15, mb: 10}}>
         Carrito 
         </Typography>
-        <Box sx={{minWidth: 700, height: 300, border:'#f06292 solid 2px'}}  >
+        <Box sx={{minWidth: 700, height: 300 }}  >
             {cart.length === 0 ? <AlertTable /> : <CartTable />}
         </Box>
         </Box>

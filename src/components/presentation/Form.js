@@ -2,9 +2,17 @@ import React, { useState } from 'react';
 import { Box, FormControl, FormHelperText, Input, InputLabel, Button } from '@mui/material';
 import { useCartContext } from '../context/CartContext';
 import { AddOrder } from '../utils/Firebase';
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content';
+import { useNavigate } from 'react-router-dom';
+
 
 
 const Form = ({iva, total}) => {
+
+    const MySwal = withReactContent(Swal)
+
+    let navigate = useNavigate()
 
     const {cart, clear } = useCartContext();
 
@@ -26,9 +34,16 @@ const Form = ({iva, total}) => {
     const today = new Date();
     const date = today.toLocaleDateString()
 
+
     const hanldeClick = () => {
         AddOrder({Buyer:{...datos}, Sleccionado:{...cart}, Iva: iva, Total: total, date})
+        MySwal.fire({
+            title: <strong>Excelente!</strong>,
+            html: <i>Su orden ya fue registrada!</i>,
+            icon: 'success'
+        })
         clear()
+        navigate('/santafepi-app')
     }
 
     
