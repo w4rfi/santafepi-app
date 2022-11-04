@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/santafepi-app/static/css/main.16123c64.css",
-    "main.js": "/santafepi-app/static/js/main.4fb03366.js",
+    "main.css": "/santafepi-app/static/css/main.233fc53a.css",
+    "main.js": "/santafepi-app/static/js/main.9367e24a.js",
     "static/media/logosantadepi.png": "/santafepi-app/static/media/logosantadepi.b9db9286bfa3928de581.png",
     "index.html": "/santafepi-app/index.html",
-    "main.16123c64.css.map": "/santafepi-app/static/css/main.16123c64.css.map",
-    "main.4fb03366.js.map": "/santafepi-app/static/js/main.4fb03366.js.map"
+    "main.233fc53a.css.map": "/santafepi-app/static/css/main.233fc53a.css.map",
+    "main.9367e24a.js.map": "/santafepi-app/static/js/main.9367e24a.js.map"
   },
   "entrypoints": [
-    "static/css/main.16123c64.css",
-    "static/js/main.4fb03366.js"
+    "static/css/main.233fc53a.css",
+    "static/js/main.9367e24a.js"
   ]
 }

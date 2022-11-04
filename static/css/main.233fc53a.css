@@ -1,0 +1,2 @@
+*{box-sizing:border-box;margin:0;padding:0}body{min-height:100vh;position:relative}footer{bottom:0;position:absolute;width:100%}.containerHome{display:flex;flex-direction:column}.imgHome{height:300px;margin:auto;width:700px}.titleHome{color:#f06292;margin-top:30px;text-align:center}.appBar{position:fixed;width:100%}.toolBar{background-color:#f06292;color:#fff;display:flex;flex-direction:row;justify-content:space-between}.logoAppBar{height:80px}.cartWidget{color:#fff}
+/*# sourceMappingURL=main.233fc53a.css.map*/
